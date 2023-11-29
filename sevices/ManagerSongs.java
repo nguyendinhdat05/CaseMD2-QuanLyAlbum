@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ManagerSongs {
-    List<Song> songs = new ArrayList<>();
+    List<Song> songs ;
 
     public List<Song> getSongs() {
         return songs;

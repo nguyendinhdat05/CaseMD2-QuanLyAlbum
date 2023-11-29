@@ -11,6 +11,7 @@ public class Song {
         this.nameSinger = nameSinger;
     }
 
+
     public int getId() {
         return id;
     }
@@ -38,7 +39,7 @@ public class Song {
     @Override
     public String toString() {
         return "ID Song : " + id +
-                " Song Name: " + nameSong + '\'' +
-                " Artist Name: " + nameSinger + '\'';
+                ", Song Name: " + nameSong + '\'' +
+                ", Artist Name: " + nameSinger + '\'';
     }
 }

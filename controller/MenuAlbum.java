@@ -1,5 +1,5 @@
 package controller;
-import sevices.Album;
+import models.Album;
 import sevices.ManagerAlbum;
 
 import java.util.Scanner;
@@ -9,7 +9,7 @@ public class MenuAlbum {
     Scanner inputInt = new Scanner(System.in);
     Scanner inputString = new Scanner(System.in);
     int choice;
-    public void showMenuAlbum() {
+    public void showMenuAlbum()  {
         do {
             System.out.println("-----Menu-----" +
                     "\n 0.Thoát" +

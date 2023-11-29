@@ -1,5 +1,7 @@
 package sevices;
 
+import models.Album;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,6 +13,9 @@ public class ManagerAlbum {
         albumList.add(new Album(2, "b"));
         albumList.add(new Album(3, "c"));
     }
+//    public ManagerAlbum() throws IOException {
+//        albumList= FileAlbum.readAlbumFromFile("album.csv"),
+//    }
 
     public void add(Album a){
         albumList.add(a);
@@ -53,5 +58,13 @@ public class ManagerAlbum {
             }
         }
         System.out.println(this.albumList.get(index));
+    }
+
+    public List<Album> getAlbumList() {
+        return albumList;
+    }
+
+    public void setAlbumList(List<Album> albumList) {
+        this.albumList = albumList;
     }
 }

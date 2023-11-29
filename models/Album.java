@@ -1,4 +1,4 @@
-package sevices;
+package models;
 
 import models.Song;
 
@@ -9,7 +9,6 @@ public class Album {
     private int id;
     private String name;
     private List<Song> album = new ArrayList<>();
-
 
     public Album(int id, String name, List<Song> album) {
         this.id = id;

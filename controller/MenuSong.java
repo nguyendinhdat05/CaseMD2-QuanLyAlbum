@@ -2,7 +2,7 @@ package controller;
 
 import data.FileSong;
 import models.Song;
-import sevices.Album;
+import models.Album;
 import sevices.ManagerSongs;
 import sevices.ManagerAlbum;
 
