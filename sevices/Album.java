@@ -53,11 +53,20 @@ public class Album {
         this.name = name;
     }
 
+    public List<Song> getAlbum() {
+        return album;
+    }
+
+    public void setAlbum(List<Song> album) {
+        this.album = album;
+    }
+
     @Override
     public String toString() {
         return " ID Album: " + id +
-                ", Tên: " + name + '\'' + "\n"+
-                " Danh sách bài hát: " + album + "\n";
+                ", Tên Album: " + name  + "\n"+
+                ", Danh Sách Bài Hát: " + album + "\n";
     }
+
 }
 

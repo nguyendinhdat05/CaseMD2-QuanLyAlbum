@@ -1,17 +1,25 @@
 package sevices;
 
+import data.FileSong;
 import models.Song;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Songs {
+public class ManagerSongs {
     List<Song> songs = new ArrayList<>();
 
-    public Songs() {
-        songs.add(new Song(1,"a", "b"));
-        songs.add(new Song(2,"b", "b"));
+    public List<Song> getSongs() {
+        return songs;
+    }
+
+    public void setSongs(List<Song> songs) {
+        this.songs = songs;
+    }
+
+    public ManagerSongs() throws IOException {
+        songs= FileSong.readFileSong("songs.csv");
 
     }
    // hiển thị danh sách bài hát
@@ -59,34 +67,5 @@ public class Songs {
             if (s.getId() == id) return s;
         }
         return null;
-    }
-    public static void writeFile(List<Song> songList) {
-        try {
-            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("C:\\Users\\admin\\IdeaProjects\\Case_MD2_QuanLyAlbum\\src\\data\\songsData.csv"));
-            String line = "";
-            for (Song s: songList) {
-                line += s.getId() + "," + s.getNameSong() + "," + s.getNameSinger();
-            }
-            bufferedWriter.write(line);
-            bufferedWriter.close();
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
-        }
-    }
-    public List<Song> readFile() {
-        List<Song> songList = new ArrayList<>();
-        try {
-            BufferedReader bufferedReader = new BufferedReader(new FileReader("C:\\Users\\admin\\IdeaProjects\\Case_MD2_QuanLyAlbum\\src\\data\\songsData.csv"));
-            String content = bufferedReader.readLine();
-            while ((content = bufferedReader.readLine()) != null) {
-                String[] value = content.split(",");
-                int id = Integer.parseInt(value[0]);
-                String nameSong = value[1];
-                String nameSinger = value[2];
-            }
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
-        }
-        return songList;
     }
 }

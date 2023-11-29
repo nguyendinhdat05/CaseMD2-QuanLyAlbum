@@ -1,14 +1,12 @@
 package sevices;
 
-import models.Song;
-
 import java.util.ArrayList;
 import java.util.List;
 
-public class User {
+public class ManagerAlbum {
     List<Album> albumList = new ArrayList<>();
 
-    public User() {
+    public ManagerAlbum() {
         albumList.add(new Album(1, "a"));
         albumList.add(new Album(2, "b"));
         albumList.add(new Album(3, "c"));
@@ -24,7 +22,8 @@ public class User {
     }
     public Album findById(int id) {
         for (Album a: albumList) {
-            if (a.getId() == id) return a;
+            if (a.getId() == id)
+                return a;
         }
         return null;
     }
